@@ -28,17 +28,16 @@ function App() {
 	// 	const posts = await PostService.getAll();
 	// 	setPosts(posts);
 	// });
- //isPostsLoading - состояние отвечающее за загрузку постов
+	//isPostsLoading - состояние отвечающее за загрузку постов
 	const [isPostsLoading, setIsPostsLoading] = useState(false);
-		async function fetchPosts() {
+	async function fetchPosts() {
 		setIsPostsLoading(true);
-		setTimeout (async () => {
+		setTimeout(async () => {
 			const response = await PostService.getAll();
-			setPosts(response.data);// получаем посты с сервера
+			setPosts(response.data); // получаем посты с сервера
 			setIsPostsLoading(false);
-		},1000)
+		}, 1000);
 	}
-	
 	// //!-------------жизненый цикл---useEffect---------------------------------------------------------------------------------------------------------------------------------------------------------
 	// [] - массив пустой, то колбэк отработает один раз (при первичной отрисовке подгрузить список постов с сервера и все)
 	// [filter] - отработает на каждое измение filter
