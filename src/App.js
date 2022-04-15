@@ -12,7 +12,6 @@ import {useFetching} from './hooks/useFetching';
 import {usePosts} from './hooks/usePosts';
 import './styles/App.css';
 import axios from 'axios';
-
 function App() {
 	const [posts, setPosts] = useState([]); // посты
 	//!-----------сортировка-----поиск---------------------------------------------------------------------------------------------------------------------------------------------------------
